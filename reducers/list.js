@@ -1,5 +1,5 @@
 import Immutable from 'immutable';
-import { ADD_ITEM, DELETE_ITEM, EDIT_ITEM, MARK_ITEM, MARK_ALL, CLEAR_MARKED } from 'constants/ActionTypes';
+import { ADD_ITEM, DELETE_ITEM, EDIT_ITEM, MARK_ITEM, MARK_ALL, CLEAR_MARKED, EMIT_ITEM } from 'constants/ActionTypes';
 
 const initialStateJS = [{
   text: 'Use Redux',

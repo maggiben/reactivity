@@ -22,15 +22,16 @@ export default class Main extends React.Component {
 
   addItem = item => {
     let { actions } = this.props;
-    console.log(actions.addItem({
+    console.log('actions', actions)
+    actions.addItem({
       text: new Date().toString(),
       marked: false,
       id: 0
-    }))
+    });
+    actions.sendMessage('hello world');
   }
 
   render () {
-    console.log(this.props)
     let { list } = this.props;
     let json = list.toJS();
     let date = new Date();
