@@ -11,6 +11,7 @@ const initialStateJS = [{
 const initialState = Immutable.fromJS(initialStateJS);
 
 export default function list(state = initialState, action) {
+  console.log('REDUCE: ', action.type)
   switch (action.type) {
   case ADD_ITEM:
     return state.unshift(Immutable.fromJS({

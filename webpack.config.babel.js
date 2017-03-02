@@ -23,7 +23,10 @@ export default {
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true,
     inline: true,
-    host : '0.0.0.0'
+    proxy: {
+      '*': 'http://127.0.0.1:9999'
+    },
+    host : '127.0.0.1'
   },
   devtool: 'inline-source-map',
   plugins: [

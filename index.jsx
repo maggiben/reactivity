@@ -10,12 +10,6 @@ import configureStore from './store/configureStore';
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
-store.subscribe(()=>{
-  console.log('new client state', store.getState());
-});
-
-store.dispatch({type:'server/hello', data:'Hello!'});
-
 // Needed for onTouchTap
 // Can go away when react 1.0 release
 // Check this repo:
