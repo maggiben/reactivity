@@ -12,7 +12,7 @@ export default {
   context: path.resolve(__dirname, './'),
   entry: {
     'bundle': ['webpack-dev-server/client?http://127.0.0.1:7070/', 'webpack/hot/only-dev-server', 'babel-polyfill', './index.jsx'],
-    'vendor': ['react']
+    'vendor': ['react', 'redux', 'lodash', 'moment']
   },
   output: {
     path: path.resolve('dist'),

@@ -2,6 +2,7 @@ import React from 'react';
 import { DevTools } from 'containers';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import * as Actions from 'actions/list';
 
 function mapStateToProps(state) {
@@ -22,9 +23,9 @@ export default class Main extends React.Component {
 
   addItem = item => {
     let { actions } = this.props;
-    console.log('actions', actions)
+    console.log('actions', actions, moment)
     actions.addItem({
-      text: new Date().toString(),
+      text: `Date: ${moment(new Date()).format('LT')}`,
       marked: false,
       id: 0
     });
@@ -38,7 +39,7 @@ export default class Main extends React.Component {
     return (
       <div className="page">
         <DevTools />
-        <h1>Main {date.toString()}</h1>
+        <h1>Main: {date.toString()}</h1>
         {
           json.map((item, index) => (
             <li key={index}>{item.text}</li>
